@@ -78,8 +78,28 @@ img {
 }
 
 /* #region Bootstrap */
+.green {
+    color: #4AC507;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.ta-c {
+    text-align: center;
+}
+
 .jc-fe {
     justify-content: flex-end;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.fd-c {
+    flex-direction: column;
 }
 
 .wrap {
@@ -175,6 +195,10 @@ img {
 
 .mr-1 {
     margin-right: 1rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
 }
 
 .mx-1 {
@@ -310,7 +334,6 @@ img {
 /* #region app-footer */
 #app-footer {
     background-color: var(--zo-app-footer-bg);
-    height: 100px;
     width: 100%;
     position: sticky;
     bottom: 0;
@@ -318,10 +341,35 @@ img {
     z-index: 2;
 }
 
-#app-footer > .container {
-    justify-content: space-between;
-    vertical-align: middle;
+.action {
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    margin: 0.5rem;
+}
+
+.action-ico > i {
+    font-size: 1.5rem;
+}
+
+.action-verb {
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+}
+
+.action-chev > i {
+    font-size: 0.5rem;
+    margin: 0 1rem;
+}
+
+.menu-right {
+    color: red;
+    background-color: #4A4A4A;
+    line-height: 4rem;
+    padding: 0 1rem;
 }
 
 /* #endregion app-footer */
