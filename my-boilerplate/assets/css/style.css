@@ -7,6 +7,7 @@
 
 body {
     font-family: var(--zo-font);
+    color: white;
 }
 
 button {
@@ -311,15 +312,30 @@ img {
     align-items: center;
 }
 
-.container .user_menu {
-    color: white;
+/* #region app-main */
+
+.pics {
+    position: relative;
 }
 
-/* #region app-main */
 #app-main {
     position: relative;
     background-color: var(--zo-app-main-bg);
 }
+
+.user {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.37);
+    padding: 0.4rem;
+}
+
+.user > .mic,
+.user > .name {
+    font-size: 0.8rem;
+}
+
 
 .icon::before {
     display: inline-block;
@@ -363,10 +379,6 @@ img {
     justify-content: space-between;
     vertical-align: middle;
     align-items: center;
-}
-
-.container .user_menu {
-    color: white;
 }
 
 /* #endregion app-footer */
