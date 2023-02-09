@@ -33,7 +33,7 @@ img {
     --zo-app-header-bg: #446bce;
     --zo-header_top-bg: #392b79;
     --zo-header_bottom-bg: #5ebfff;
-    --zo-app-main-bg: #0E0E0E;
+    --zo-app-main-bg: #000000;
     --zo-section_1-bg: #da4520;
     --zo-section_2-bg: #4bda20;
     --zo-section_3-bg: #da20d1;
@@ -44,7 +44,7 @@ img {
     --zo-height: 600px;
     --zo-logo-ratio: 678 / 151;
     --zo-shadow: #9d9d9d;
-    --zo-font: font-family: 'Fredoka', sans-serif;
+    --zo-font: 'Fredoka', sans-serif;
     --zo-btn-dark: #22272b;
     --zo-btn-primary: #8ea0e0;
     --zo-btn-light: #f7f7f6;
@@ -54,26 +54,19 @@ img {
 /* #endregion Common Rules */
 
 /* #region Debug */
-.debug > #app-header {
-    height: var(--zo-size);
-    background-color: var(--zo-color);
+.debug > #app-main .container {
+    background-color: red
 }
 
-.debug > #app-main {
-    height: var(--zo-size);
-    background-color: var(--zo-color);
-}
-
-.debug > #app-footer {
-    height: var(--zo-size);
-    background-color: var(--zo-color);
+.debug .card {
+    background-color: rgb(251, 255, 0)
 }
 
 /* #endregion Debug */
 
 /* #region Utilities */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1152px;
     margin: auto;
 }
@@ -261,15 +254,17 @@ img {
 }
 
 .hd_content {
-    margin: 0.5rem;
+    margin: 0.3rem;
 }
 
 .speaker_view,
 .maximize {
-    background: rgba(255, 255, 255, 0.37);
-    padding: 0.4rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 0.2rem;
     z-index: 10;
     border-radius: 0.5rem;
+    font-size: 0.6rem;
+    margin-right: 0.2rem;
 }
 
 
@@ -277,7 +272,7 @@ img {
 
 /* #region app-main */
 
-.pics {
+.card {
     position: relative;
 }
 
@@ -286,21 +281,28 @@ img {
     background-color: var(--zo-app-main-bg);
 }
 
-#app-main > .container {
-    background-color: black;
+.row {
+    margin: -0.2rem -0.1rem;
+    /* per annullare l'overflow creato dalle colonne */
+}
+
+.col-70 {
+    padding: 0.2rem 0.1rem;
 }
 
 .user {
     position: absolute;
-    bottom: 0;
+    bottom: 4px;
+    /* per via di un problema strano che fa si che la card sia sempre 4px in più dell'immagine che contiene */
     left: 0;
-    background: rgba(0, 0, 0, 0.37);
-    padding: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 0.2rem;
 }
 
 .user > .mic,
 .user > .name {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+    margin-right: 0.2rem;
 }
 
 /* #endregion app-main */
