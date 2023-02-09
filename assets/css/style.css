@@ -33,7 +33,7 @@ img {
     --zo-app-header-bg: #446bce;
     --zo-header_top-bg: #392b79;
     --zo-header_bottom-bg: #5ebfff;
-    --zo-app-main-bg: #000000;
+    --zo-app-main-bg: #0E0E0E;
     --zo-section_1-bg: #da4520;
     --zo-section_2-bg: #4bda20;
     --zo-section_3-bg: #da20d1;
@@ -73,24 +73,9 @@ img {
 
 /* #region Utilities */
 .container {
-    width: 70%;
+    width: 90%;
     max-width: 1152px;
     margin: auto;
-}
-
-.container-sm {
-    width: 60%;
-    max-width: 840px;
-    margin: auto;
-}
-
-.wave-container {
-    background: black;
-    color: white;
-}
-
-.wave-container > svg {
-    display: block;
 }
 
 .clearfix::after {
@@ -98,43 +83,6 @@ img {
     display: table;
     clear: both;
 }
-
-.logo {
-    background-image: url("../img/logo.png");
-    height: 2rem;
-    aspect-ratio: var(--zo-logo-ratio);
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-/* #region Button-utility */
-
-.btn-small {
-    padding: 0.25rem 0.75rem;
-    font-size: 0.9rem;
-}
-
-.btn-lg {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-}
-
-.btn-light {
-    background-color: var(--zo-btn-light);
-    color: var(--zo-btn-dark)
-}
-
-.btn-dark {
-    background-color: var(--zo-btn-dark);
-    color: var(--zo-btn-lighter)
-}
-
-.btn-primary {
-    background-color: var(--zo-btn-primary);
-    color: var(--zo-btn-lighter);
-}
-
-/* #endregion Button-utility */
 
 /* #region Bootstrap */
 .jc-fe {
@@ -151,6 +99,10 @@ img {
 
 .gap-05 {
     gap: 0.5rem;
+}
+
+.p-3 {
+    padding: 3rem;
 }
 
 .px-3 {
@@ -334,6 +286,10 @@ img {
     background-color: var(--zo-app-main-bg);
 }
 
+#app-main > .container {
+    background-color: black;
+}
+
 .user {
     position: absolute;
     bottom: 0;
@@ -346,32 +302,6 @@ img {
 .user > .name {
     font-size: 0.8rem;
 }
-
-
-.icon::before {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    line-height: 20px;
-    text-align: center;
-    font-size: 0.65rem;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-}
-
-.check::before {
-    content: "\2713";
-    border: 1px solid green;
-    color: green;
-}
-
-.cross::before {
-    content: "\2717";
-    border: 1px solid red;
-    color: red;
-}
-
 
 /* #endregion app-main */
 
