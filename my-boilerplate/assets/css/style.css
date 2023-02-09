@@ -137,6 +137,10 @@ img {
 /* #endregion Button-utility */
 
 /* #region Bootstrap */
+.jc-fe {
+    justify-content: flex-end;
+}
+
 .wrap {
     flex-wrap: wrap;
 }
@@ -298,19 +302,26 @@ img {
 /* #endregion Utilities */
 
 /* #region app-header */
-
-/* #endregion app-header */
 #app-header {
     width: 100%;
     position: fixed;
     z-index: 2;
 }
 
-#app-header > .container {
-    justify-content: space-between;
-    vertical-align: middle;
-    align-items: center;
+.hd_content {
+    margin: 0.5rem;
 }
+
+.speaker_view,
+.maximize {
+    background: rgba(255, 255, 255, 0.37);
+    padding: 0.4rem;
+    z-index: 10;
+    border-radius: 0.5rem;
+}
+
+
+/* #endregion app-header */
 
 /* #region app-main */
 
