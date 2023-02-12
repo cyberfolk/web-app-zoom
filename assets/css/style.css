@@ -6,14 +6,9 @@
 }
 
 body {
-    font-family: var(--zo-font);
     color: white;
-}
-
-button {
-    border: none;
-    border-radius: 2rem;
-    padding: 0.5rem 1rem;
+    background-color: var(--z-darker);
+    overflow: hidden;
 }
 
 a {
@@ -26,29 +21,18 @@ li {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 :root {
-    --zo-app-header-bg: #446bce;
-    --zo-header_top-bg: #392b79;
-    --zo-header_bottom-bg: #5ebfff;
-    --zo-app-main-bg: #000000;
-    --zo-section_1-bg: #da4520;
-    --zo-section_2-bg: #4bda20;
-    --zo-section_3-bg: #da20d1;
-    --zo-section_4-bg: #dace20;
-    --zo-app-footer-bg: #222222;
-    --zo-footer_top-bg: #8092a0;
-    --zo-footer_bottom-bg: #454d53;
-    --zo-height: 600px;
-    --zo-logo-ratio: 678 / 151;
-    --zo-shadow: #9d9d9d;
-    --zo-font: 'Fredoka', sans-serif;
-    --zo-btn-dark: #22272b;
-    --zo-btn-primary: #8ea0e0;
-    --zo-btn-light: #f7f7f6;
-    --zo-btn-lighter: white;
+    --z-app-header-height: 40px;
+    --z-app-footer-height: 60px;
+    --z-dark: #4b4b4a;
+    --z-dark-trasparent: #4b4b4ab0;
+    --z-darker: #222222;
+    --z-light: white;
+    --z-danger: red;
+    --z-success: #4ac901;
 }
 
 /* #endregion Common Rules */
@@ -71,10 +55,13 @@ img {
     margin: auto;
 }
 
-.clearfix::after {
-    content: '';
-    display: table;
-    clear: both;
+.btn {
+    background-color: var(--z-dark);
+    color: var(--z-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border-width: 0;
+    margin: 0.25rem;
 }
 
 /* #region Bootstrap */
@@ -230,30 +217,6 @@ img {
     margin-bottom: 1.3rem;
 }
 
-.col-8 {
-    width: calc((100% / 12) * 8);
-}
-
-.col-7 {
-    width: calc((100% / 12) * 7);
-}
-
-.col-70 {
-    width: calc(100% / 7);
-}
-
-.col-5 {
-    width: calc((100% / 12) * 5);
-}
-
-.col-4 {
-    width: calc((100% / 12) * 4);
-}
-
-.col-2 {
-    width: calc((100% / 12) * 2);
-}
-
 .d-flex {
     display: flex;
 }
@@ -272,73 +235,60 @@ img {
 
 /* #region app-header */
 #app-header {
-    width: 100%;
-    position: fixed;
-    z-index: 2;
+    height: var(--z-app-header-height);
+    text-align: end;
 }
-
-.hd_content {
-    margin: 0.3rem;
-}
-
-.speaker_view,
-.maximize {
-    background-color: rgba(255, 255, 255, 0.25);
-    padding: 0.2rem;
-    z-index: 10;
-    border-radius: 0.5rem;
-    font-size: 0.6rem;
-    margin-right: 0.2rem;
-}
-
 
 /* #endregion app-header */
 
 /* #region app-main */
+#app-main {
+    height: calc(100vh - var(--z-app-footer-height) - var(--z-app-header-height));
+}
 
 .card {
     position: relative;
-}
-
-#app-main {
-    position: relative;
-    background-color: var(--zo-app-main-bg);
+    padding: 0.5rem;
+    width: 250px;
+    height: 150px;
 }
 
 .row {
-    margin: -0.2rem -0.1rem;
-    /* per annullare l'overflow creato dalle colonne */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: center;
+    overflow-y: auto;
 }
 
-.col-70 {
-    padding: 0.2rem 0.1rem;
-}
-
-.user {
+.name {
     position: absolute;
-    bottom: 4px;
-    /* per via di un problema strano che fa si che la card sia sempre 4px in più dell'immagine che contiene */
-    left: 0;
+    /* Dovrebbe essere bottom:0 e left:0 ma per via del padding di card metto queste misure */
+    bottom: 3px;
+    left: 8px;
     background-color: rgba(0, 0, 0, 0.35);
     padding: 0.2rem;
-}
-
-.user > .mic,
-.user > .name {
-    font-size: 0.6rem;
-    margin-right: 0.2rem;
 }
 
 /* #endregion app-main */
 
 /* #region app-footer */
 #app-footer {
-    background-color: var(--zo-app-footer-bg);
-    width: 100%;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--z-dark);
+    color: var(--z-light);
+    height: var(--z-app-footer-height);
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    height: 100%;
 }
 
 .action {
@@ -365,11 +315,12 @@ img {
     margin: 0 1rem;
 }
 
-.menu-right {
-    color: red;
-    background-color: #4A4A4A;
-    line-height: 4rem;
+.menu-right > button {
+    height: 100%;
     padding: 0 1rem;
+    color: #f00;
+    background: #808080;
+    border: none;
 }
 
 /* #endregion app-footer */
