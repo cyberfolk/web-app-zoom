@@ -9,6 +9,8 @@ body {
     color: white;
     background-color: var(--z-darker);
     overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 a {
@@ -26,7 +28,7 @@ img {
 
 :root {
     --z-app-header-height: 40px;
-    --z-app-footer-height: 60px;
+    --z-app-footer-height: 75px;
     --z-dark: #4b4b4a;
     --z-dark-trasparent: #4b4b4ab0;
     --z-darker: #222222;
@@ -64,10 +66,11 @@ img {
     margin: 0.25rem;
 }
 
-/* #region Bootstrap */
 .green {
     color: #4AC507;
 }
+
+/* #region Bootstrap */
 
 .ai-c {
     align-items: center;
@@ -248,7 +251,7 @@ img {
 
 .card {
     position: relative;
-    padding: 0.5rem;
+    padding: 0.25rem;
     width: 250px;
     height: 150px;
 }
@@ -292,7 +295,7 @@ img {
 }
 
 .action {
-    height: 3rem;
+    height: 4rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -302,18 +305,25 @@ img {
 }
 
 .action-ico > i {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .action-verb {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-top: 0.3rem;
 }
 
-.action-chev > i {
-    font-size: 0.5rem;
-    margin: 0 1rem;
+.action-angle > i {
+    font-size: 0.8rem;
+    margin-left: 0.7rem;
+    margin-right: 2rem;
 }
+
+.action-angle > .m-special {
+    margin-right: 5rem;
+    /* Questa classe è necessaria perchè "Share Screen" è un nome troppo lungo manderebbe la chevron sotto la successiva icona */
+}
+
 
 .menu-right > button {
     height: 100%;
