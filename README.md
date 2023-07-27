@@ -10,4 +10,4 @@ In questo esercizio per disporre in modo ordianto le icone degli utenti ho ricre
 🔗 Repository:
 https://github.com/cyberfolk/web-app-zoom.git
 
-<img src="./public/screen/screencapture.png" />
+<img src="./assets/img/screencapture.png" />
