@@ -4,7 +4,8 @@
 
 **Tecnologie:** HTML, CSS, Flex e grid
 
-🧑🏻‍💻 Ecco qui la mia replica di Zoom, uno dei primi progetti realizzati con Boolean.
-In questo esercizio per disporre in modo ordianto le icone degli utenti ho ricreato funzionalità di una griglia utilizzando flex.
+**Info**: 🧑🏻‍💻 Here is my replica of Zoom, one of the first projects created with Boolean.
+In this exercise, to arrange the user icons in an orderly manner, I recreated the functionality of a grid using Flex.
 
+## Schreenshot
 <img src="./assets/references/screencapture.png" />
